@@ -1,4 +1,4 @@
-//import com.jse.june.day02.*;
+import 
 public class StaticTest{
     static int some_data;
 
