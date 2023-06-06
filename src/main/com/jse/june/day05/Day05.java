@@ -1,5 +1,17 @@
 import java.util.*;
 public class Day05{
+    public static String ageCalcHandler(int age){
+        if(age < 13){
+            return "kid";
+        }
+        else if(age >= 13 && age <20){
+            return "teen";
+        }
+        else{
+            return "adult";
+        }
+    }
+
     public static List<String> fizzBuzz(int num){
         List<String> result = new ArrayList<>();
         int i = 1;
@@ -61,6 +73,7 @@ public class Day05{
        for(int i = 0;i<10;i++){
            System.out.print(fibnocci(i) +" ");
        }
+       System.out.println(ageCalcHandler(100));
 
     }
 }
