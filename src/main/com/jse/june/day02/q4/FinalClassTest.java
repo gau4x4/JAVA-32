@@ -7,6 +7,8 @@ final class FinalClassTest{
     public static void main(String []args){
         FinalClassTest fct = new FinalClassTest();
         fct.getData();
+
+
     }
 
 }
