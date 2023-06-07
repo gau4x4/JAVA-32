@@ -15,7 +15,7 @@ public class Day06{
     }
     public static void reverseArray(int[] nums){
         int low = 0, high = nums.length-1;
-        while(low <= high){
+        while(low < high){
             int temp = nums[low];
             nums[low++] = nums[high];
             nums[high--] = temp;
@@ -27,7 +27,7 @@ public class Day06{
         }
     }
     public static void reverseRotatedArray(int[] nums, int low, int high){
-        while(high>low){
+        while(low < high){
             int temp = nums[low];
             nums[low++] = nums[high];
             nums[high--] = temp;
@@ -46,9 +46,11 @@ public class Day06{
     }
     public static void main(String ...args){
         int nums[] = new int[]{2,4,1,30,24,6,123,23};
-
         minmax(nums);
         reverseArray(nums);
-        rotateArray(nums,3);
+
+        int numsToRotate[] = new int[]{2,4,1,30,24,6,123,23};
+        rotateArray(numsToRotate,3);
+
     }
 }
