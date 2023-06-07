@@ -1,8 +1,5 @@
 import java.util.*;
 public class Day05{
-//    public static String[] ret(){
-//        return new ArrayList<String>();
-//    }
     public static String ageCalcHandler(int age){
         if(age < 13){
             return "kid";
