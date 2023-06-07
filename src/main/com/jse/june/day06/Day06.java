@@ -1,16 +1,22 @@
 public class Day06{
     public static void minmax(int[] nums){
         int min = Integer.MAX_VALUE,max = Integer.MIN_VALUE;
-
-        for(int num:nums){
-            if(min>num)
-                min = num;
-            if(max<num){
-                max = num;
-            }
+        if(nums.length == 0){
+            System.out.println("Null Array");
+            System.out.println("Null Array");
         }
-        System.out.println("Max value of the Array is:"+max);
-        System.out.println("Min value of the Array is:"+min);
+        else{
+            for(int num:nums){
+                if(min>num)
+                    min = num;
+                if(max<num){
+                    max = num;
+                }
+            }
+            System.out.println("Max value of the Array is:"+max);
+            System.out.println("Min value of the Array is:"+min);
+        }
+
 
     }
     public static void reverseArray(int[] nums){
