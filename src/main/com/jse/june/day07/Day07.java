@@ -101,27 +101,38 @@ public class Day07{
         List<String> records = new ArrayList<>();
         List<Student> students = new ArrayList<>();
         try (Scanner scanner = new Scanner(new File("student.csv"))) {
+            if(!scanner.hasNextLine())
+                System.out.println("No data found!");
+
             while (scanner.hasNextLine()) {
-                records.add(scanner.nextLine());
+                String stuline = scanner.nextLine();
+                if(!stuline.equals("")){
+                    String[] line = stuline.split(" ");
+                    double gpa = Double.isNaN(Double.valueOf(line[2]))?0:Double.valueOf(line[2]);
+                    Student student = new Student(line[0],line[1],gpa);
+                    students.add(student);
+                }
+
             }
         }catch(Exception e){
             System.out.println(e);
         }
-        for(String str:records){
-            String[] line = str.split(" ");
-            Student student = new Student(line[0],line[1],Double.valueOf(line[2]));
-            students.add(student);
-        }
+
         Collections.sort(students);
         for(Student student:students){
             System.out.println(student.getLastName());
         }
     }
     public static void main(String ...str){
+        System.out.println("Counting Vowels...");
         findVowels("Student@1d44bcfa");
+        System.out.println("Rotated Substrings...");
         subStringRotated("JavaJ2eeStrutsHibernate", "StrutsHibernateJavaJ2ee");
+        System.out.println("Reversing words in a sentence...");
         reverseSentenceWords("Java J2EE Reverse Me");
+        System.out.println("Valid anagram if the strings contain only alphabets...");
         System.out.println(validAnagramWay3("gaurav","varuag"));
+        System.out.println("Reading CSV file...");
         csvReaderSorter();
     }
 }
