@@ -94,7 +94,7 @@ public class DSAPackageString {
 
     public static void csvReaderSorter() {
         List<Student> students = new ArrayList<>();
-        try (Scanner scanner = new Scanner(new File("./student.csv"))) {
+        try (Scanner scanner = new Scanner(new File("student.csv"))) {
             if (!scanner.hasNextLine())
                 System.out.println("No data found!");
 
