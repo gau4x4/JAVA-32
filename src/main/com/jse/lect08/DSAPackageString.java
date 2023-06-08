@@ -3,7 +3,7 @@ package main.com.jse.lect08;
 import java.util.*;
 import java.io.*;
 
-public class Day07 {
+public class DSAPackageString {
     public static boolean validAnagramWay1(String s1, String s2) {
 
         if (s1.length() != s2.length()) {
