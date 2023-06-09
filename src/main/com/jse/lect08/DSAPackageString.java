@@ -44,14 +44,16 @@ public class DSAPackageString {
         if (s1.length() != s2.length()) {
             return false;
         } else {
-            int[] charArray = new int[26];
+            int[] freqArray = new int[256];
+            char[] charArr1 = s1.toLowerCase().toCharArray();
+            char[] charArr2 = s2.toLowerCase().toCharArray();
 
-            for (int i = 0; i < s1.length(); i++) {
-                charArray[s1.charAt(i) - 'a']++;
-                charArray[s2.charAt(i) - 'a']--;
+            for (int i = 0; i < charArr1.length; i++) {
+                freqArray[charArr1[i] - 'a']++;
+                freqArray[charArr2[i] - 'a']--;
             }
 
-            for (int i : charArray) {
+            for (int i : freqArray) {
                 if (i != 0) {
                     return false;
                 }
@@ -126,7 +128,7 @@ public class DSAPackageString {
         System.out.println("Reversing words in a sentence...");
         reverseSentenceWords("Java J2EE Reverse Me");
         System.out.println("Valid anagram if the strings contain only alphabets...");
-        System.out.println(validAnagramWay3("gaurav", "varuag"));
+        System.out.println(validAnagramWay3("gaurav", "varuaG"));
         System.out.println("Reading CSV file...");
         csvReaderSorter();
     }
