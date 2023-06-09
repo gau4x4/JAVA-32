@@ -108,7 +108,7 @@ public class DSAPackageString {
         try (Scanner scanner = new Scanner(new File("student.csv"))) {
             if (!scanner.hasNextLine())
                 System.out.println("No data found!");
-
+            else
             while (scanner.hasNextLine()) {
                 String stuLine = scanner.nextLine();
                 if (!stuLine.equals("")) {
@@ -120,7 +120,7 @@ public class DSAPackageString {
 
             }
         } catch (Exception e) {
-            System.out.println(e);
+            e.printStackTrace();
         }
 
         Collections.sort(students);
