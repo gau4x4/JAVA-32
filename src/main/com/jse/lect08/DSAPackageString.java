@@ -90,8 +90,17 @@ public class DSAPackageString {
     }
 
     public static void subStringRotated(String s1, String s2) {
-        String coupledStringS1 = s1 + s1;
-        System.out.println(coupledStringS1.contains(s2));
+        if(s1.length() != s2.length()){
+            System.out.println("Strings differ in length");
+
+        }else{
+            String coupledStringS1 = s1 + s1;
+            System.out.println(coupledStringS1.contains(s2));{
+                System.out.println(coupledStringS1.contains(s2));
+
+            }
+        }
+
     }
 
     public static void csvReaderSorter() {
