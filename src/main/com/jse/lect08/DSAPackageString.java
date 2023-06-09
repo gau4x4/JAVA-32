@@ -112,7 +112,7 @@ public class DSAPackageString {
             while (scanner.hasNextLine()) {
                 String stuLine = scanner.nextLine();
                 if (!stuLine.equals("")) {
-                    String[] line = stuLine.split(" ");
+                    String[] line = stuLine.split(",");
                     double gpa = Double.isNaN(Double.parseDouble(line[2])) ? 0 : Double.parseDouble(line[2]);
                     Student student = new Student(line[0], line[1], gpa);
                     students.add(student);
