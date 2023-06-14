@@ -4,7 +4,7 @@ public class CustomExceptionHandling {
         try{
             return dividend / divisor;
         }catch(Exception e){
-            throw new CustomException("Division by zero");
+            throw new CustomException();
         }
     }
     public static void main(String[] args) {

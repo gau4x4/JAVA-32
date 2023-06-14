@@ -2,7 +2,7 @@ package main.com.jse.lect09;
 public class ExceptionAssignment {
     public static int toNumerical(String str) throws NumberFormatException{
         try{
-            return Integer.valueOf(str);
+            return Integer.parseInt(str);
         }catch(NumberFormatException nfe){
             throw new NumberFormatException("Number format Exception");
         }
