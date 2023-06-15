@@ -33,7 +33,6 @@ public class ThreadDividedSum {
     for (Future<Integer> i : list) {
       try {
         finamSum += i.get();
-        System.out.println("Individual thread sum: "+i.get());
       } catch (InterruptedException e) {
         throw new RuntimeException(e);
       } catch (ExecutionException e) {
