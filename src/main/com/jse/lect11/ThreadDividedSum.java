@@ -24,7 +24,7 @@ public class ThreadDividedSum {
     for (int i = 0; i < threadCount; i++) {
       int low = i * elemsPerThread;
       int high = (i == threadCount - 1) ? nums.length - 1 : low + elemsPerThread - 1;
-      Future<Integer> ret = (Future<Integer>) es.submit(new ThreadSumHelper(nums, low, high));
+      Future<Integer> ret = es.submit(new ThreadSumHelper(nums, low, high));
       list.add(ret);
     }
 
@@ -33,9 +33,7 @@ public class ThreadDividedSum {
     for (Future<Integer> i : list) {
       try {
         finamSum += i.get();
-      } catch (InterruptedException e) {
-        throw new RuntimeException(e);
-      } catch (ExecutionException e) {
+      } catch (InterruptedException | ExecutionException e) {
         throw new RuntimeException(e);
       }
     }
