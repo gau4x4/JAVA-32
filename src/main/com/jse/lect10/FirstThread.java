@@ -5,6 +5,6 @@ public class FirstThread extends Thread{
     public void run() {
 //        super.run();
         TaskRunner tr = new TaskRunner();
-        tr.printSomeWork("First");
+        tr.printSomeWork("First",51,100);
     }
 }

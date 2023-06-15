@@ -4,6 +4,6 @@ public class SecondThread implements Runnable{
     @Override
     public void run() {
         TaskRunner tr = new TaskRunner();
-        tr.printSomeWork("Second");
+        tr.printSomeWork("Second",1,50);
     }
 }
