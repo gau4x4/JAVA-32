@@ -5,7 +5,7 @@ import java.util.List;
 
 public class VowelsInString {
   public static void main(String[] args) {
-    String[] strings = {"apple", "banana", "cherry", "date"};
+    String[] strings = {"cat", "animal", "someone", "program"};
 
     List<String> stringList = Arrays.asList(strings);
 

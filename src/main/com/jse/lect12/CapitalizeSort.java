@@ -7,7 +7,7 @@ import java.util.stream.Stream;
 
 public class CapitalizeSort {
   public static void main(String[] args) {
-    String[] strings = {"apple", "banana", "cherry", "date"};
+    String[] strings = {"cat", "animal", "someone", "program"};
 
     String[] capitalizedStrings =
         Arrays.stream(strings)
