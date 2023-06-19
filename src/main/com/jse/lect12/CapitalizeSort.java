@@ -14,6 +14,6 @@ public class CapitalizeSort {
             .map(str -> str.substring(0, 1).toUpperCase() + str.substring(1)).sorted()
             .toArray(String[]::new);
 
-    Arrays.stream(capitalizedStrings).forEach(System.out::println);
+    Arrays.stream(capitalizedStrings).forEach(s-> System.out.println(s));
   }
 }
