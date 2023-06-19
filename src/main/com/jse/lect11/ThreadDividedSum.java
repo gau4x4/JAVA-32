@@ -10,16 +10,18 @@ import java.util.concurrent.Future;
 
 public class ThreadDividedSum {
   public static void main(String[] args) throws ExecutionException, InterruptedException {
-    int[] nums = new int[100];
+    int[] nums = new int[115];
     Random rand = new Random();
+//    int sum3 = 0;
     for (int i = 0; i < nums.length; i++) {
       nums[i] = rand.nextInt(100);
+//      sum3 += nums[i];
     }
-
-    int threadCount = 5;
+//    System.out.println(sum3);
+    int threadCount = 4;
     int elemsPerThread = nums.length / threadCount;
 
-    ExecutorService es = Executors.newFixedThreadPool(5);
+    ExecutorService es = Executors.newFixedThreadPool(threadCount);
     List<Future<Integer>> list = new ArrayList<>();
     for (int i = 0; i < threadCount; i++) {
       int low = i * elemsPerThread;
