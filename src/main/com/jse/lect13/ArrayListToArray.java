@@ -13,8 +13,8 @@ public class ArrayListToArray {
     list.add("Java");
     list.add("Ironman");
 
-    Object[] objArr = list.toArray();
+    String[] strings = list.toArray(new String[0]);
 
-    for (Object obj : objArr) System.out.println(obj);
+    for (String str : strings) System.out.println(str);
   }
 }
