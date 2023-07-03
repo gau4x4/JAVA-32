@@ -1,0 +1,1 @@
+Validate, Compile, Test, Package, Integration test, Verify, Install, and Deploy
