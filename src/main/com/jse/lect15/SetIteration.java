@@ -20,13 +20,13 @@ public class SetIteration {
     set.add("Karen");
     set.add("Steven");
     System.out.println("Iteration via forEach:");
-    set.forEach(s -> System.out.println(s));
+    set.forEach(System.out::println);
 
     Iterator<String> itr = set.iterator();
     System.out.println("Iteration via Iterator:");
 
     while (itr.hasNext()) System.out.println(itr.next());
     System.out.println("Iteration via streams:");
-    set.stream().forEach(s -> System.out.println(s));
+    set.stream().forEach(System.out::println);
   }
 }

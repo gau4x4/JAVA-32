@@ -29,8 +29,8 @@ public class OptionalDateImplementation {
     return input.map(String::toUpperCase);
   }
   //  Calculating Age
-  public static int calculateAge(LocalDate birthdate, LocalDate currentDate) {
-    return Period.between(birthdate, currentDate).getYears();
+  public static int calculateAge(LocalDate birthdate) {
+    return Period.between(birthdate, LocalDate.now()).getYears();
   }
   // Calculating Earliest Date out of a given List of Dates
   public static LocalDate getEarliestDate(List<LocalDate> dates) {
@@ -44,7 +44,6 @@ public class OptionalDateImplementation {
   //  Calculating Total working day starting from a given date till the end of the month
   public static int getWorkingDays(LocalDate startDate) {
     LocalDate endOfMonth = startDate.withDayOfMonth(startDate.lengthOfMonth());
-    System.out.println(DayOfWeek.SATURDAY);
     int workingDays = 0;
     while (!startDate.isAfter(endOfMonth)) {
       if (startDate.getDayOfWeek() != DayOfWeek.SATURDAY
@@ -97,9 +96,7 @@ public class OptionalDateImplementation {
 
     //    Handling Calculation of Age
     LocalDate birthdate = LocalDate.of(1995, 4, 22);
-    LocalDate currentDate = LocalDate.now();
-
-    int age = calculateAge(birthdate, currentDate);
+    int age = calculateAge(birthdate);
     System.out.println("You Age is: " + age);
     System.out.println("=============================================");
 
@@ -118,8 +115,7 @@ public class OptionalDateImplementation {
     System.out.println("=============================================");
 
     // Handling Calculation of Working days
-    LocalDate startDate = LocalDate.of(2023, 7, 10);
-
+    LocalDate startDate = LocalDate.of(2023, 7, 1);
     int workingDays = getWorkingDays(startDate);
 
     System.out.println("Total working days from: " + startDate + " is " + workingDays);
